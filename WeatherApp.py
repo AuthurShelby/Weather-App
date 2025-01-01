@@ -138,7 +138,6 @@ class WeatherApp(QWidget):
     def DisplayWeather(self,data):
         self.TempratureLabel.setStyleSheet("font-size:75px;")
         temp = str(int(data['main']['temp'] - 273.15))
-        print(data)
         description = data['weather'][0]['description']
         IconCode = data['weather'][0]['id']
         self.TempratureLabel.setText(f"{temp}°C")            
