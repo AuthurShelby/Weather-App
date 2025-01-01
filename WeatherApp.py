@@ -67,14 +67,15 @@ class WeatherApp(QWidget):
 
         }
         QLabel#DescriptionLabel{
-            font-size:39px;
+            font-size:39px; 
         }
         """)
         self.GetButton.clicked.connect(self.RetriveWeather)
 
     def RetriveWeather(self):
         city = self.CityInput.text()
-        ApiKey = "4b0c5c9e20e0c85052b8078af13601f4"
+        # for getting data please provide your own API KEY
+        ApiKey = "PROVIDE YOUR OWN API KEY" 
         url = f"https://api.openweathermap.org/data/2.5/weather?q={city}&appid={ApiKey}"
 
         try:
